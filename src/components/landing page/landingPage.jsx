@@ -11,8 +11,10 @@ import '../../assets/landing_page/vendor/aos/aos.css';
 import '../../assets/landing_page/vendor/glightbox/css/glightbox.min.css';
 import '../../assets/landing_page/vendor/swiper/swiper-bundle.min.css';
 import '../../assets/landing_page/css/main.css';
-import EventsSection from './EventsSection';
-import TestimonialsSection from './TestimonialsSection';
+import  image1  from "../../assets/landing_page/img/eventsimg/events-1.jpg";
+import  image2  from "../../assets/landing_page/img/eventsimg/events-2.jpg";
+import  image3  from "../../assets/landing_page/img/eventsimg/events-3.jpg";
+import  image4  from "../../assets/landing_page/img/eventsimg/events-4.jpg";
 
 function LandingPage() {
     useEffect(() => {
@@ -41,9 +43,9 @@ function LandingPage() {
             },
         });
 
-        return () => {
-            swiper.destroy();
-        };
+        // return () => {
+        //     if (swiper) swiper.destroy();
+        // };
         }, []);
 
         useEffect (() => {
@@ -511,14 +513,14 @@ function LandingPage() {
                 </div>
             </div>
         </section>
-
+        
         <section id="events" className="events section">
       <div className="container-fluid" data-aos="fade-up" data-aos-delay="100">
         <div className="swiper init-swiper">
           <div className="swiper-wrapper">
             <div
               className="swiper-slide event-item d-flex flex-column justify-content-end"
-              style={{ backgroundImage: 'url(assets/img/events-1.jpg)' }} // Ensure the correct path
+              style={{ backgroundImage: `url(${image1})` }} // Ensure the correct path
             >
               <h3>Custom Parties</h3>
               <div className="price align-self-start">$99</div>
@@ -531,7 +533,7 @@ function LandingPage() {
 
             <div
               className="swiper-slide event-item d-flex flex-column justify-content-end"
-              style={{ backgroundImage: 'url(assets/img/events-2.jpg)' }} // Ensure the correct path
+              style={{ backgroundImage: `url(${image2})` }} // Ensure the correct path
             >
               <h3>Private Parties</h3>
               <div className="price align-self-start">$289</div>
@@ -544,7 +546,7 @@ function LandingPage() {
 
             <div
               className="swiper-slide event-item d-flex flex-column justify-content-end"
-              style={{ backgroundImage: 'url(assets/img/events-3.jpg)' }} // Ensure the correct path
+              style={{ backgroundImage: `url(${image3})` }} // Ensure the correct path
             >
               <h3>Birthday Parties</h3>
               <div className="price align-self-start">$499</div>
@@ -557,7 +559,7 @@ function LandingPage() {
 
             <div
               className="swiper-slide event-item d-flex flex-column justify-content-end"
-              style={{ backgroundImage: 'url(assets/img/events-4.jpg)' }} // Ensure the correct path
+              style={{ backgroundImage: `url(${image4})` }} // Ensure the correct path
             >
               <h3>Wedding Parties</h3>
               <div className="price align-self-start">$899</div>
@@ -571,11 +573,7 @@ function LandingPage() {
           <div className="swiper-pagination"></div>
         </div>
       </div>
-    </section>
-        
-
-
-
+        </section>
 
         </main>
         <script src="../../assets/landing_page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
