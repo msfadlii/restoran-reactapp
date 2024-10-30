@@ -15,6 +15,7 @@ import  image1  from "../../assets/landing_page/img/eventsimg/events-1.jpg";
 import  image2  from "../../assets/landing_page/img/eventsimg/events-2.jpg";
 import  image3  from "../../assets/landing_page/img/eventsimg/events-3.jpg";
 import  image4  from "../../assets/landing_page/img/eventsimg/events-4.jpg";
+import reservation from "../../assets/landing_page/img/reservation.jpg";
 
 function LandingPage() {
     useEffect(() => {
@@ -575,6 +576,134 @@ function LandingPage() {
       </div>
         </section>
 
+        <section id="chefs" className="chefs section">
+            {/* Section Title */}
+            <div className="container section-title" data-aos="fade-up">
+                <h2>Chefs</h2>
+                <p><span>Our</span> <span className="description-title">Professional Chefs<br /></span></p>
+            </div>{/* End Section Title */}
+
+            <div className="container">
+
+                <div className="row gy-4">
+
+                <div className="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div className="team-member">
+                    <div className="member-img">
+                        <img src="/img/chefs/chefs-1.jpg" className="img-fluid" alt="" />
+                        <div className="social">
+                        <a href=""><i className="bi bi-twitter-x"></i></a>
+                        <a href=""><i className="bi bi-facebook"></i></a>
+                        <a href=""><i className="bi bi-instagram"></i></a>
+                        <a href=""><i className="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div className="member-info">
+                        <h4>Walter White</h4>
+                        <span>Master Chef</span>
+                        <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                    </div>
+                    </div>
+                </div>{/* End Chef Team Member */}
+
+                <div className="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                    <div className="team-member">
+                    <div className="member-img">
+                        <img src="/img/chefs/chefs-2.jpg" className="img-fluid" alt="" />
+                        <div className="social">
+                        <a href=""><i className="bi bi-twitter-x"></i></a>
+                        <a href=""><i className="bi bi-facebook"></i></a>
+                        <a href=""><i className="bi bi-instagram"></i></a>
+                        <a href=""><i className="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div className="member-info">
+                        <h4>Sarah Johnson</h4>
+                        <span>Patissier</span>
+                        <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                    </div>
+                    </div>
+                </div>{/* End Chef Team Member */}
+
+                <div className="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div className="team-member">
+                    <div className="member-img">
+                        <img src="/img/chefs/chefs-3.jpg" className="img-fluid" alt="" />
+                        <div className="social">
+                        <a href=""><i className="bi bi-twitter-x"></i></a>
+                        <a href=""><i className="bi bi-facebook"></i></a>
+                        <a href=""><i className="bi bi-instagram"></i></a>
+                        <a href=""><i className="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div className="member-info">
+                        <h4>William Anderson</h4>
+                        <span>Cook</span>
+                        <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+                    </div>
+                    </div>
+                </div>{/* End Chef Team Member */}
+
+                </div>
+            </div>
+        </section>
+
+        <section id="book-a-table" className="book-a-table section">
+            {/* Section Title */}
+            <div className="container section-title" data-aos="fade-up">
+                <h2>Book A Table</h2>
+                <p><span>Book Your</span> <span className="description-title">Stay With Us<br /></span></p>
+            </div>{/* End Section Title */}
+
+            <div className="container">
+
+                <div className="row g-0" data-aos="fade-up" data-aos-delay="100">
+
+                <div className="col-lg-4 reservation-img" style={{ backgroundImage: `url(${reservation})` }}></div>
+
+                <div className="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
+                    <form action="forms/book-a-table.php" method="post" role="form" className="php-email-form">
+                    <div className="row gy-4">
+                        <div className="col-lg-4 col-md-6">
+                        <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required />
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                        <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required />
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                        <input type="text" className="form-control" name="phone" id="phone" placeholder="Your Phone" required />
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                        <input type="date" name="date" className="form-control" id="date" placeholder="Date" required />
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                        <input type="time" className="form-control" name="time" id="time" placeholder="Time" required />
+                        </div>
+                        <div className="col-lg-4 col-md-6">
+                        <input type="number" className="form-control" name="people" id="people" placeholder="# of people" required />
+                        </div>
+                    </div>
+
+                    <div className="form-group mt-3">
+                        <textarea className="form-control" name="message" rows="5" placeholder="Message"></textarea>
+                    </div>
+
+                    <div className="text-center mt-3">
+                        <div className="loading">Loading</div>
+                        <div className="error-message"></div>
+                        <div className="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+                        <button type="submit">Book a Table</button>
+                    </div>
+                    </form>
+                </div>{/* End Reservation Form */}
+
+                </div>
+
+            </div>
+        </section>
+
+        
+        
         </main>
         <script src="../../assets/landing_page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../../assets/landing_page/vendor/php-email-form/validate.js"></script>
