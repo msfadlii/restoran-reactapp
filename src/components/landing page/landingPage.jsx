@@ -649,11 +649,11 @@ function LandingPage() {
         </section>
 
         <section id="book-a-table" className="book-a-table section">
-            {/* Section Title */}
+            {/* Booktable */}
             <div className="container section-title" data-aos="fade-up">
                 <h2>Book A Table</h2>
                 <p><span>Book Your</span> <span className="description-title">Stay With Us<br /></span></p>
-            </div>{/* End Section Title */}
+            </div>
 
             <div className="container">
 
@@ -701,9 +701,156 @@ function LandingPage() {
 
             </div>
         </section>
+        
+        <section id="gallery" className="gallery section light-background">
+                {/* Section Title */}
+                <div className="container section-title" data-aos="fade-up">
+                    <h2>Gallery</h2>
+                    <p><span>Check</span> <span className="description-title">Our Gallery</span></p>
+                </div>{/* End Section Title */}
 
-        
-        
+                <div className="container" data-aos="fade-up" data-aos-delay="100">
+
+                    <div className="swiper init-swiper">
+                    <script type="application/json" className="swiper-config">
+                        {JSON.stringify({
+                        loop: true,
+                        speed: 600,
+                        autoplay: {
+                            delay: 5000
+                        },
+                        slidesPerView: "auto",
+                        centeredSlides: true,
+                        pagination: {
+                            el: ".swiper-pagination",
+                            type: "bullets",
+                            clickable: true
+                        },
+                        breakpoints: {
+                            320: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                            },
+                            768: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                            },
+                            1200: {
+                            slidesPerView: 5,
+                            spaceBetween: 20
+                            }
+                        }
+                        })}
+                    </script>
+                    <div className="swiper-wrapper align-items-center">
+                        <div className="swiper-slide">
+                        <a className="glightbox" data-gallery="images-gallery" href="/img/gallery/gallery-1.jpg">
+                            <img src="/img/gallery/gallery-1.jpg" className="img-fluid" alt="" />
+                        </a>
+                        </div>
+                        <div className="swiper-slide">
+                        <a className="glightbox" data-gallery="images-gallery" href="/img/gallery/gallery-2.jpg">
+                            <img src="/img/gallery/gallery-2.jpg" className="img-fluid" alt="" />
+                        </a>
+                        </div>
+                        <div className="swiper-slide">
+                        <a className="glightbox" data-gallery="images-gallery" href="/img/gallery/gallery-3.jpg">
+                            <img src="/img/gallery/gallery-3.jpg" className="img-fluid" alt="" />
+                        </a>
+                        </div>
+                        <div className="swiper-slide">
+                        <a className="glightbox" data-gallery="images-gallery" href="/img/gallery/gallery-4.jpg">
+                            <img src="/img/gallery/gallery-4.jpg" className="img-fluid" alt="" />
+                        </a>
+                        </div>
+                        <div className="swiper-slide">
+                        <a className="glightbox" data-gallery="images-gallery" href="/img/gallery/gallery-5.jpg">
+                            <img src="/img/gallery/gallery-5.jpg" className="img-fluid" alt="" />
+                        </a>
+                        </div>
+                        <div className="swiper-slide">
+                        <a className="glightbox" data-gallery="images-gallery" href="/img/gallery/gallery-6.jpg">
+                            <img src="/img/gallery/gallery-6.jpg" className="img-fluid" alt="" />
+                        </a>
+                        </div>
+                        <div className="swiper-slide">
+                        <a className="glightbox" data-gallery="images-gallery" href="/img/gallery/gallery-7.jpg">
+                            <img src="/img/gallery/gallery-7.jpg" className="img-fluid" alt="" />
+                        </a>
+                        </div>
+                        <div className="swiper-slide">
+                        <a className="glightbox" data-gallery="images-gallery" href="/img/gallery/gallery-8.jpg">
+                            <img src="/img/gallery/gallery-8.jpg" className="img-fluid" alt="" />
+                        </a>
+                        </div>
+                    </div>
+                    <div className="swiper-pagination"></div>
+                    </div>
+                </div>
+        </section>
+
+        <footer id="footer" className="footer dark-background">
+
+                <div className="container">
+                    <div className="row gy-3">
+                    <div className="col-lg-3 col-md-6 d-flex">
+                        <i className="bi bi-geo-alt icon"></i>
+                        <div className="address">
+                        <h4>Address</h4>
+                        <p>A108 Adam Street</p>
+                        <p>New York, NY 535022</p>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-3 col-md-6 d-flex">
+                        <i className="bi bi-telephone icon"></i>
+                        <div>
+                        <h4>Contact</h4>
+                        <p>
+                            <strong>Phone:</strong> <span>+1 5589 55488 55</span><br />
+                            <strong>Email:</strong> <span>info@example.com</span><br />
+                        </p>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-3 col-md-6 d-flex">
+                        <i className="bi bi-clock icon"></i>
+                        <div>
+                        <h4>Opening Hours</h4>
+                        <p>
+                            <strong>Mon-Sat:</strong> <span>11AM - 23PM</span><br />
+                            <strong>Sunday:</strong> <span>Closed</span>
+                        </p>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-3 col-md-6">
+                        <h4>Follow Us</h4>
+                        <div className="social-links d-flex">
+                        <a href="#" className="twitter"><i className="bi bi-twitter-x"></i></a>
+                        <a href="#" className="facebook"><i className="bi bi-facebook"></i></a>
+                        <a href="#" className="instagram"><i className="bi bi-instagram"></i></a>
+                        <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+
+            <div className="container copyright text-center mt-4">
+                <p>© <span>Copyright</span> <strong className="px-1 sitename">Yummy</strong> <span>All Rights Reserved</span></p>
+                <div className="credits">
+                {/* All the links in the footer should remain intact. */}
+                {/* You can delete the links only if you've purchased the pro version. */}
+                {/* Licensing information: https://bootstrapmade.com/license/ */}
+                {/* Purchase the pro version with working PHP/AJAX contact form: [buy-url] */}
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+
+        </footer>
+
+
         </main>
         <script src="../../assets/landing_page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../../assets/landing_page/vendor/php-email-form/validate.js"></script>
