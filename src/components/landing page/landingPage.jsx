@@ -1,19 +1,21 @@
-import React, { useEffect } from 'react'; // Tambahkan useEffect di sini
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 import '../../assets/landing_page/vendor/bootstrap/css/bootstrap.min.css';
 import '../../assets/landing_page/vendor/bootstrap-icons/bootstrap-icons.css';
 import '../../assets/landing_page/vendor/aos/aos.css';
 import '../../assets/landing_page/vendor/glightbox/css/glightbox.min.css';
 import '../../assets/landing_page/vendor/swiper/swiper-bundle.min.css';
 import '../../assets/landing_page/css/main.css';
+import EventsSection from './EventsSection';
+import TestimonialsSection from './TestimonialsSection';
 
 function LandingPage() {
     useEffect(() => {
         AOS.init();
     }, []);
+    
     
     return (
         <div className="index-page">
@@ -62,7 +64,7 @@ function LandingPage() {
                     <div className="container">
                         <div className="row gy-4 justify-content-center justify-content-lg-between">
                             <div className="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                                <h1 data-aos="fade-up">Enjoy Your Healthy<br />Delicious Food</h1>
+                            <h1 data-aos="fade-up">Enjoy Your Healthy<br />Delicious Food</h1>
                                 <p data-aos="fade-up" data-aos-delay="100">We are a team of talented designers making websites with Bootstrap</p>
                                 <div className="d-flex" data-aos="fade-up" data-aos-delay="200">
                                     <a href="#book-a-table" className="btn-get-started">Book a Table</a>
@@ -89,7 +91,7 @@ function LandingPage() {
                 <div className="container">
                     <div className="row gy-4">
                         <div className="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-                            <img src="../../assets/landing_page/img/about.jpg" className="img-fluid mb-4" alt="" />
+                            <img src="/img/about.jpg" className="img-fluid mb-4" alt="" />
                             <div className="book-a-table">
                                 <h3>Book a Table</h3>
                                 <p>+1 5589 55488 55</p>
@@ -110,7 +112,7 @@ function LandingPage() {
                                 </p>
 
                                 <div className="position-relative mt-4">
-                                    <img src="../../assets/landing_page/img/about-2.jpg" className="img-fluid" alt="" />
+                                    <img src="/img/about-2.jpg" className="img-fluid" alt="" />
                                     <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" className="glightbox pulsating-play-btn"></a>
                                 </div>
                             </div>
@@ -169,6 +171,160 @@ function LandingPage() {
                     </div>
                 </div>
             </section>
+                <section id="stats" className="stats section dark-background">
+                <img src="/img/stats-bg.jpg" alt="" data-aos="fade-in" />
+
+                <div className="container position-relative" data-aos="fade-up" data-aos-delay="100">
+                    <div className="row gy-4">
+                        <div className="col-lg-3 col-md-6">
+                            <div className="stats-item text-center w-100 h-100">
+                                <span
+                                    data-purecounter-start="0"
+                                    data-purecounter-end="232"
+                                    data-purecounter-duration="1"
+                                    className="purecounter"
+                                />
+                                <p>Clients</p>
+                            </div>
+                        </div>
+                        {/* End Stats Item */}
+
+                        <div className="col-lg-3 col-md-6">
+                            <div className="stats-item text-center w-100 h-100">
+                                <span
+                                    data-purecounter-start="0"
+                                    data-purecounter-end="521"
+                                    data-purecounter-duration="1"
+                                    className="purecounter"
+                                />
+                                <p>Projects</p>
+                            </div>
+                        </div>
+                        {/* End Stats Item */}
+
+                        <div className="col-lg-3 col-md-6">
+                            <div className="stats-item text-center w-100 h-100">
+                                <span
+                                    data-purecounter-start="0"
+                                    data-purecounter-end="1453"
+                                    data-purecounter-duration="1"
+                                    className="purecounter"
+                                />
+                                <p>Hours Of Support</p>
+                            </div>
+                        </div>
+                        {/* End Stats Item */}
+
+                        <div className="col-lg-3 col-md-6">
+                            <div className="stats-item text-center w-100 h-100">
+                                <span
+                                    data-purecounter-start="0"
+                                    data-purecounter-end="32"
+                                    data-purecounter-duration="1"
+                                    className="purecounter"
+                                />
+                                <p>Workers</p>
+                            </div>
+                        </div>
+                        {/* End Stats Item */}
+                    </div>
+                </div>
+            </section>
+            <section id="menu" className="menu section">
+            {/* Section Title */}
+            <div className="container section-title" data-aos="fade-up">
+                <h2>Our Menu</h2>
+                <p>
+                    <span>Check Our</span> <span className="description-title">Yummy Menu</span>
+                </p>
+            </div>
+            {/* End Section Title */}
+
+            <div className="container">
+                <ul className="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <li className="nav-item">
+                        <a className="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+                            <h4>Starters</h4>
+                        </a>
+                    </li>
+                    {/* End tab nav item */}
+
+                    <li className="nav-item">
+                        <a className="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
+                            <h4>Breakfast</h4>
+                        </a>
+                    </li>
+                    {/* End tab nav item */}
+
+                    <li className="nav-item">
+                        <a className="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
+                            <h4>Lunch</h4>
+                        </a>
+                    </li>
+                    {/* End tab nav item */}
+
+                    <li className="nav-item">
+                        <a className="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
+                            <h4>Dinner</h4>
+                        </a>
+                    </li>
+                    {/* End tab nav item */}
+                </ul>
+
+                <div className="tab-content" data-aos="fade-up" data-aos-delay="200">
+                    {/* Starters Menu Content */}
+                    <div className="tab-pane fade active show" id="menu-starters">
+                        <div className="tab-header text-center">
+                            <p>Menu</p>
+                            <h3>Starters</h3>
+                        </div>
+
+                        <div className="row gy-5">
+                            {menuItems.map((item, index) => (
+                                <div className="col-lg-4 menu-item" key={index}>
+                                    <a href={item.image} className="glightbox">
+                                        <img src={item.image} className="menu-img img-fluid" alt={item.title} />
+                                    </a>
+                                    <h4>{item.title}</h4>
+                                    <p className="ingredients">{item.ingredients}</p>
+                                    <p className="price">{item.price}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    {/* End Starter Menu Content */}
+
+                    {/* Repeat similar structure for Breakfast, Lunch, Dinner */}
+                    <div className="tab-pane fade" id="menu-breakfast">
+                        <div className="tab-header text-center">
+                            <p>Menu</p>
+                            <h3>Breakfast</h3>
+                        </div>
+                        <div className="row gy-5">{/* Similar items as above */}</div>
+                    </div>
+                    {/* End Breakfast Menu Content */}
+
+                    <div className="tab-pane fade" id="menu-lunch">
+                        <div className="tab-header text-center">
+                            <p>Menu</p>
+                            <h3>Lunch</h3>
+                        </div>
+                        <div className="row gy-5">{/* Similar items as above */}</div>
+                    </div>
+                    {/* End Lunch Menu Content */}
+
+                    <div className="tab-pane fade" id="menu-dinner">
+                        <div className="tab-header text-center">
+                            <p>Menu</p>
+                            <h3>Dinner</h3>
+                        </div>
+                        <div className="row gy-5">{/* Similar items as above */}</div>
+                    </div>
+                    {/* End Dinner Menu Content */}
+                </div>
+            </div>
+        </section>
+        <TestimonialsSection/>
         </main>
         <script src="../../assets/landing_page/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../../assets/landing_page/vendor/php-email-form/validate.js"></script>
@@ -181,5 +337,44 @@ function LandingPage() {
     
     );
 }
+
+const menuItems = [
+    {
+        title: "Magnam Tiste",
+        ingredients: "Lorem, deren, trataro, filede, nerada",
+        price: "$5.95",
+        image: "/img/menu/menu-item-1.png",
+    },
+    {
+        title: "Aut Luia",
+        ingredients: "Lorem, deren, trataro, filede, nerada",
+        price: "$14.95",
+        image: "/img/menu/menu-item-2.png",
+    },
+    {
+        title: "Est Eligendi",
+        ingredients: "Lorem, deren, trataro, filede, nerada",
+        price: "$8.95",
+        image: "/img/menu/menu-item-3.png",
+    },
+    {
+        title: "Eos Luibusdam",
+        ingredients: "Lorem, deren, trataro, filede, nerada",
+        price: "$12.95",
+        image: "/img/menu/menu-item-4.png",
+    },
+    {
+        title: "Laboriosam Direva",
+        ingredients: "Lorem, deren, trataro, filede, nerada",
+        price: "$9.95",
+        image: "/img/menu/menu-item-5.png",
+    },
+    {
+        title: "Laboriosam Direva",
+        ingredients: "Lorem, deren, trataro, filede, nerada",
+        price: "$12.95",
+        image: "/img/menu/menu-item-6.png",
+    },
+];
 
 export default LandingPage;
